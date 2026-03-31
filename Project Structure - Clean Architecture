@@ -1,0 +1,38 @@
+AI-Meeting-Knowledge-System
+│
+├── src
+│
+│   ├── MeetingAI.API
+│   │     ├── Controllers
+│   │     │     MeetingController.cs
+│   │     │     SearchController.cs
+│   │     ├── Services
+│   │     │     UploadService.cs
+│   │     │     MeetingService.cs
+│   │     ├── DTOs
+│   │     └── Program.cs
+│
+│   ├── MeetingAI.Core
+│   │     ├── Entities
+│   │     │     Meeting.cs
+│   │     │     Decision.cs
+│   │     │     ActionItem.cs
+│   │     ├── Interfaces
+│   │     └── Models
+│
+│   ├── MeetingAI.Infrastructure
+│   │     ├── Data
+│   │     │     ApplicationDbContext.cs
+│   │     ├── Repositories
+│   │     └── Storage
+│
+│   ├── MeetingAI.Worker
+│   │     ├── SpeechProcessingService.cs
+│   │     ├── NLPAnalysisService.cs
+│   │     └── WorkerService.cs
+│
+├── docs
+│     architecture.md
+│
+├── README.md
+│
