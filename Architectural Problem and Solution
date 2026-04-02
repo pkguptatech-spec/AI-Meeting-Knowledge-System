@@ -20,20 +20,21 @@ The system allows users to upload meeting audio recordings through a web interfa
 
 4. Key Architecture Components
 
-1. Load Balancer
+• Load Balancer
 Distributes incoming traffic across multiple API instances to ensure high availability and improved performance.
-2. API Gateway / Backend Services
+• API Gateway / Backend Services
 Acts as the central entry point for all requests. Handles authentication, routing, and communication with backend services.
-3. Message Queue (RabbitMQ)
+• Message Queue (RabbitMQ)
 Enables asynchronous processing by sending heavy tasks such as transcription and NLP analysis to worker services.
-4. Worker Services
+• Worker Services
 Background workers consume tasks from the queue and perform speech-to-text transcription, NLP processing, and action item extraction.
-5. Database Layer
+• Database Layer
 A relational database stores transcripts, meeting metadata, extracted decisions, and action items.
-6. Cache Layer (Redis)
+• Cache Layer (Redis)
 Redis is used as a distributed cache to store frequently accessed data and reduce database load.
-7. Object Storage
+• Object Storage
 Stores uploaded meeting recordings using scalable storage such as cloud blob storage.
+
 5. Scalability Considerations
 The system is designed to scale horizontally. Additional API instances can be added behind the load balancer to handle increased traffic. Worker services can scale independently based on the number of messages in the queue. Redis caching helps reduce database load and improve response times.
 
